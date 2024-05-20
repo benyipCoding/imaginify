@@ -7,7 +7,6 @@ import {
   SignInButton,
   SignedIn,
   SignedOut,
-  UserButton,
 } from "@clerk/nextjs";
 
 const IBMPlex = IBM_Plex_Sans({
@@ -34,10 +33,7 @@ export default function RootLayout({
     >
       <html lang="en">
         <body className={cn("font-IBMPlex antialiased", IBMPlex.variable)}>
-          <SignedOut>
-            <SignInButton />
-          </SignedOut>
-          <SignedIn>{children}</SignedIn>
+          {children}
         </body>
       </html>
     </ClerkProvider>
